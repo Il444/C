@@ -4,6 +4,13 @@
 #include <stdlib.h>
 using namespace std;
 
+template <typename T>
+void output(T array, int length) {
+    for (int i = 0; i < length; i++) {
+        cout << array[i] << " ";
+    }
+}
+
 int main()
 {
     int choice  = 0;
@@ -38,9 +45,7 @@ int main()
     }
    
     cout << "Here is our array: ";
-    for (int i = 0; i < length; i++) {
-        cout << array[i] << " ";
-    }
+    output(array, length);
     cout << endl;
     cout << endl;
 
@@ -54,9 +59,7 @@ int main()
 
     cout << "Array that was created by quick sort: ";
     quickSort(array, 0, length - 1, count_srav, count_perem);
-    for (int i = 0; i < length; i++) {
-        cout << array[i] << " ";
-    }
+    output(array, length);
 
     cout << endl;
     cout << "The amount of comparasements during quick sort: " << count_srav << endl;
@@ -68,9 +71,7 @@ int main()
     cout << endl;
     cout << "Array that was created by binary sort: ";
     binarySort(array_copy, length, count_srav, count_perem);
-    for (int i = 0; i < length; i++) {
-        cout << array[i] << " ";
-    }
+    output(array, length);
     cout << endl;
     cout << "The amount of comparasements during binary sort: " << count_srav << endl;
     cout << "The amount of movement during binary sort: " << count_perem << endl;

@@ -1,47 +1,48 @@
 ﻿  Lab 5.2.cpp
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244: =: преобразование "int" в "T", возможна потеря данных
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244:         with
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244:         [
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244:             T=float
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244:         ]
+D:\C++\Functions\Lab 5.2\Lab 5.2\Lab 5.2.cpp(57,32): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244:         with
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244:         [
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244:             T=float
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244:         ]
   (компиляция исходного файла "Lab%205.2.cpp")
-      D:\C++\Lab 5.2\Lab 5.2\array_init.h(8,15):
+      D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(8,15):
       контекст создания экземпляра шаблона (сначала самый старый)
-          D:\C++\Lab 5.2\Lab 5.2\array_init.h(25,2):
+          D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(25,2):
           выполняется компиляция ссылки на экземпляр шаблон функции "void ascending<float>(T *,int)"
           with
           [
               T=float
           ]
   
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(31,26): warning C4244: =: преобразование "int" в "T", возможна потеря данных
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(31,26): warning C4244:         with
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(31,26): warning C4244:         [
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(31,26): warning C4244:             T=float
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(31,26): warning C4244:         ]
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(31,26): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(31,26): warning C4244:         with
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(31,26): warning C4244:         [
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(31,26): warning C4244:             T=float
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(31,26): warning C4244:         ]
   (компиляция исходного файла "Lab%205.2.cpp")
-      D:\C++\Lab 5.2\Lab 5.2\array_init.h(31,26):
+      D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(31,26):
       контекст создания экземпляра шаблона (сначала самый старый)
-          D:\C++\Lab 5.2\Lab 5.2\array_init.h(48,2):
+          D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(48,2):
           выполняется компиляция ссылки на экземпляр шаблон функции "void descending<float>(T *,int)"
           with
           [
               T=float
           ]
   
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(54,21): warning C4244: =: преобразование "int" в "T", возможна потеря данных
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(54,21): warning C4244:         with
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(54,21): warning C4244:         [
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(54,21): warning C4244:             T=float
-D:\C++\Lab 5.2\Lab 5.2\array_init.h(54,21): warning C4244:         ]
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(54,21): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(54,21): warning C4244:         with
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(54,21): warning C4244:         [
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(54,21): warning C4244:             T=float
+D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(54,21): warning C4244:         ]
   (компиляция исходного файла "Lab%205.2.cpp")
-      D:\C++\Lab 5.2\Lab 5.2\array_init.h(54,21):
+      D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(54,21):
       контекст создания экземпляра шаблона (сначала самый старый)
-          D:\C++\Lab 5.2\Lab 5.2\array_init.h(71,2):
+          D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(71,2):
           выполняется компиляция ссылки на экземпляр шаблон функции "void random<float>(T *,int)"
           with
           [
               T=float
           ]
   
-  Lab 5.2.vcxproj -> D:\C++\Lab 5.2\x64\Debug\Lab 5.2.exe
+  Lab 5.2.vcxproj -> D:\C++\Functions\Lab 5.2\x64\Debug\Lab 5.2.exe

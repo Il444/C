@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C\u002B\u002B\\Lab 5.2\\",
+  "WorkspaceRootPath": "D:\\C\u002B\u002B\\Functions\\Lab 5.2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67E23F7E-6D25-4688-967E-3590AF705506}|Lab 5.2\\Lab 5.2.vcxproj|D:\\C\u002B\u002B\\Lab 5.2\\Lab 5.2\\sorting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{67E23F7E-6D25-4688-967E-3590AF705506}|Lab 5.2\\Lab 5.2.vcxproj|D:\\C\u002B\u002B\\Functions\\Lab 5.2\\Lab 5.2\\Lab 5.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{67E23F7E-6D25-4688-967E-3590AF705506}|Lab 5.2\\Lab 5.2.vcxproj|solutionrelative:Lab 5.2\\Lab 5.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67E23F7E-6D25-4688-967E-3590AF705506}|Lab 5.2\\Lab 5.2.vcxproj|D:\\C\u002B\u002B\\Functions\\Lab 5.2\\Lab 5.2\\sorting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{67E23F7E-6D25-4688-967E-3590AF705506}|Lab 5.2\\Lab 5.2.vcxproj|solutionrelative:Lab 5.2\\sorting.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67E23F7E-6D25-4688-967E-3590AF705506}|Lab 5.2\\Lab 5.2.vcxproj|D:\\C\u002B\u002B\\Lab 5.2\\Lab 5.2\\array_init.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{67E23F7E-6D25-4688-967E-3590AF705506}|Lab 5.2\\Lab 5.2.vcxproj|D:\\C\u002B\u002B\\Functions\\Lab 5.2\\Lab 5.2\\array_init.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{67E23F7E-6D25-4688-967E-3590AF705506}|Lab 5.2\\Lab 5.2.vcxproj|solutionrelative:Lab 5.2\\array_init.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67E23F7E-6D25-4688-967E-3590AF705506}|Lab 5.2\\Lab 5.2.vcxproj|D:\\C\u002B\u002B\\Lab 5.2\\Lab 5.2\\Lab 5.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{67E23F7E-6D25-4688-967E-3590AF705506}|Lab 5.2\\Lab 5.2.vcxproj|solutionrelative:Lab 5.2\\Lab 5.2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +22,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "array_init.h",
-              "DocumentMoniker": "D:\\C\u002B\u002B\\Lab 5.2\\Lab 5.2\\array_init.h",
+              "DocumentMoniker": "D:\\C\u002B\u002B\\Functions\\Lab 5.2\\Lab 5.2\\array_init.h",
               "RelativeDocumentMoniker": "Lab 5.2\\array_init.h",
-              "ToolTip": "D:\\C\u002B\u002B\\Lab 5.2\\Lab 5.2\\array_init.h",
+              "ToolTip": "D:\\C\u002B\u002B\\Functions\\Lab 5.2\\Lab 5.2\\array_init.h",
               "RelativeToolTip": "Lab 5.2\\array_init.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-28T13:22:50.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-28T13:22:50.195Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "sorting.h",
-              "DocumentMoniker": "D:\\C\u002B\u002B\\Lab 5.2\\Lab 5.2\\sorting.h",
+              "DocumentMoniker": "D:\\C\u002B\u002B\\Functions\\Lab 5.2\\Lab 5.2\\sorting.h",
               "RelativeDocumentMoniker": "Lab 5.2\\sorting.h",
-              "ToolTip": "D:\\C\u002B\u002B\\Lab 5.2\\Lab 5.2\\sorting.h*",
-              "RelativeToolTip": "Lab 5.2\\sorting.h*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAASAAAAAAAAAA==",
+              "ToolTip": "D:\\C\u002B\u002B\\Functions\\Lab 5.2\\Lab 5.2\\sorting.h",
+              "RelativeToolTip": "Lab 5.2\\sorting.h",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-28T13:21:57.734Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Lab 5.2.cpp",
-              "DocumentMoniker": "D:\\C\u002B\u002B\\Lab 5.2\\Lab 5.2\\Lab 5.2.cpp",
+              "DocumentMoniker": "D:\\C\u002B\u002B\\Functions\\Lab 5.2\\Lab 5.2\\Lab 5.2.cpp",
               "RelativeDocumentMoniker": "Lab 5.2\\Lab 5.2.cpp",
-              "ToolTip": "D:\\C\u002B\u002B\\Lab 5.2\\Lab 5.2\\Lab 5.2.cpp",
+              "ToolTip": "D:\\C\u002B\u002B\\Functions\\Lab 5.2\\Lab 5.2\\Lab 5.2.cpp",
               "RelativeToolTip": "Lab 5.2\\Lab 5.2.cpp",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAAEYAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-26T10:02:29.262Z",
               "EditorCaption": ""
