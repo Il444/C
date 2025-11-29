@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\C++\lesson 1\Beginning\Beginning\main.cpp(4,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  Beginning.vcxproj -> D:\C++\lesson 1\Beginning\x64\Debug\Beginning.exe
