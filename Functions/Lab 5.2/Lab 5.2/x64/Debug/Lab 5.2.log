@@ -1,5 +1,4 @@
 ﻿  Lab 5.2.cpp
-D:\C++\Functions\Lab 5.2\Lab 5.2\Lab 5.2.cpp(57,32): warning C4244: =: преобразование "double" в "int", возможна потеря данных
 D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244: =: преобразование "int" в "T", возможна потеря данных
 D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244:         with
 D:\C++\Functions\Lab 5.2\Lab 5.2\array_init.h(8,15): warning C4244:         [

@@ -17,7 +17,7 @@ int main()
     int length = 0;
     int count_srav = 0;
     int count_perem = 0;
-    cout << "Enter the length of array: ";
+    cout << "Enter the length of array: "; 
     cin >> length;
     int* array = new int[length];
     cout << "How would you like to enter the array: " << endl;
