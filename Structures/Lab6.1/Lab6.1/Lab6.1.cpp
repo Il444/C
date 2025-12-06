@@ -5,10 +5,10 @@ using namespace std;
 
 struct Student {
     char name[50];
-    int age : 6;
-    int course : 3;
-    int group : 3;
-    int soc_group : 4;
+    int age;
+    int course;
+    int group;
+    int soc_group;
     char gender;
     double gpa;
 };
@@ -26,15 +26,21 @@ void namesGenerate(char* name) {
 }
 
 void initRandomSt(Student& s) {
+    int luck = rand() % 10;
     namesGenerate(s.name);
-    s.age = 18 + rand() % 7;
+    if (luck == 0) {
+        s.age = rand() % 60;
+    }
+    else {
+        s.age = 18 + rand() % 7;
+    }
     s.course = 1 + rand() % 4;
     s.gender = (rand() % 2 == 0) ? 'M' : 'F';
     s.gpa = rand() % 10; 
 }
 
 void InitRandom(Student arr[], int& size) {
-    cout << "How many students would you like? ";
+    cout << "How many students would you like to get? ";
     cin >> size;
     if (size <= 0) {
         cout << "Invalid number!" << endl;
@@ -94,15 +100,15 @@ void searchForBadSt(const Student arr[], int size, int& target) {
     for (int i = 0; i < size; i++) {
         if (arr[i].course == target && arr[i].gpa < min_gpa) {
             count++;
-            cout << count << ". " << arr[i].name << " GPA is " << arr[i].gpa;
+            cout << count << ". " << arr[i].name << " GPA is " << arr[i].gpa << endl;
         }
     }
 
     if (count == 0) {
-        cout << "There are no bad students" << endl;
+        cout << "There are no bad students from " << target << "  course." <<  endl;
     }
     else {
-        cout << "The amount of bad students is: " << count;
+        cout << "The amount of bad students is: " << count << endl;
     }
 }
 
@@ -158,6 +164,10 @@ int main()
         case(Random):
             InitRandom(students, size);
             break;
+
+        default:
+            cout << "Invalid choice!" << endl;
         }
-    } while (choice != 5);
+    } while (choice != 0);
+    return 0;
 }
