@@ -8,7 +8,6 @@ struct Student {
     int age;
     int course;
     int group;
-    int soc_group;
     char gender;
     double gpa;
 };
@@ -129,7 +128,6 @@ void Search(const Student arr[], int size) {
 
 int main()
 {
-
     int choice = 0;
     const int maxsize = 100;
     int size = 0;

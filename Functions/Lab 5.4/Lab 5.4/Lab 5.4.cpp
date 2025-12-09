@@ -10,7 +10,7 @@ void output(char* S) {
     cout << S;
 }
 
-void shiftRight(int pos, char* S, int& length, int way) {
+void replacement(int pos, char* S, int& length, int way) {
     if (way == 1) {
         length += 2;
         for (int i = length; i >= pos; i--) {
@@ -21,20 +21,6 @@ void shiftRight(int pos, char* S, int& length, int way) {
         length += 1;
         for (int i = length; i >= pos; i--) {
             S[i + 1] = S[i];
-        }
-    }
-}
-
-void replacement(int pos, char* S, int& length, int way) {
-    shiftRight(pos, S, length, way);
-    if (way == 1) {
-        for (int i = (pos + 1); i > pos; i--) {
-            S[i] = S[i - 2];
-        }
-    }
-    if (way == 2) {
-        for (int i = (pos + 1); i > pos; i--) {
-            S[i] = S[i - 1];
         }
     }
 }
@@ -50,7 +36,7 @@ void places_to_replace(int& length, char* S, int& left, int& _length) {
         if (i + 2 >= _length) break;
         if (S[i] == S[i + 1] && S[i] == S[i + 2] && S[i] != S[i + 3]) {
             way = 1;
-            pos = i + 2;
+            pos = i;
             replacement(pos, S, length, way);
             i += 5;
         }
