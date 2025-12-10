@@ -1,0 +1,6 @@
+﻿  Fedorenko.cpp
+D:\C++\Test\Fedorenko\Fedorenko\Fedorenko.cpp(8,6): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+D:\C++\Test\Fedorenko\Fedorenko\Fedorenko.cpp(19,17): warning C4244: инициализация: преобразование "double" в "unsigned int", возможна потеря данных
+D:\C++\Test\Fedorenko\Fedorenko\Fedorenko.cpp(22,20): warning C4018: <=: несоответствие типов со знаком и без знака
+D:\C++\Test\Fedorenko\Fedorenko\Fedorenko.cpp(26,20): warning C4018: <=: несоответствие типов со знаком и без знака
+  Fedorenko.vcxproj -> D:\C++\Test\Fedorenko\x64\Debug\Fedorenko.exe
