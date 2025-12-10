@@ -101,7 +101,10 @@ int main()
 
     cout << "Modified sentence: ";
     output(S);
+    while (true)
+    {
 
+    }
     delete[]S;
     return 0;
 }
