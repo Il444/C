@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C\u002B\u002B\\Functions. Course 2\\Lab 1.2 (string)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{21E0C42D-2FF7-43BB-9473-9466EBF03A31}|Lab 1.2 (string)\\Lab 1.2 (string).vcxproj|D:\\C\u002B\u002B\\Functions. Course 2\\Lab 1.2 (string)\\Lab 1.2 (string)\\Lab 1.2 (string).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{21E0C42D-2FF7-43BB-9473-9466EBF03A31}|Lab 1.2 (string)\\Lab 1.2 (string).vcxproj|solutionrelative:Lab 1.2 (string)\\Lab 1.2 (string).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Lab 1.2 (string).cpp",
+              "DocumentMoniker": "D:\\C\u002B\u002B\\Functions. Course 2\\Lab 1.2 (string)\\Lab 1.2 (string)\\Lab 1.2 (string).cpp",
+              "RelativeDocumentMoniker": "Lab 1.2 (string)\\Lab 1.2 (string).cpp",
+              "ToolTip": "D:\\C\u002B\u002B\\Functions. Course 2\\Lab 1.2 (string)\\Lab 1.2 (string)\\Lab 1.2 (string).cpp",
+              "RelativeToolTip": "Lab 1.2 (string)\\Lab 1.2 (string).cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-13T19:46:59.781Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
