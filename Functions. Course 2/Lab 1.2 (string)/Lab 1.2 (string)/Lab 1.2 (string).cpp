@@ -1,38 +1,37 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <string>
 #include <iostream>
+#include <vector>
 using namespace std;
 
-void SetTheArray(char* buffer, int size) {
+void SetTheArray(string& text) {
     cout << "Enter your text: ";
-    cin.getline(buffer, size);
+    getline(cin, text);
 }
 
-int MarkWords(char* buffer, char array[][100], char* delim, int size) {
+vector<string> MarkWords(const string& text, const string& delim) {
+    vector<string> words;
+    string word = "";
     int start = 0;
-    int count = -1;
     int i = 0;
     int length = 0;
     bool startWithDelim = false;
 
-    for (int j = 0; buffer[j] != '\0'; j++) {
+    for (int j = 0; j < text.length(); j++) {
         start = i;
         for (int k = 0; delim[k] != '\0'; k++) {
-            if (buffer[j] == delim[k] && (j == 0 || buffer[j - 1] != delim[k])) {
+            if (text[j] == delim[k] && (j == 0 || text[j - 1] != delim[k])) {
                 length = j - start;
                 startWithDelim = false;
                 for (int d = 0; delim[d] != '\0'; d++) {
-                    if (buffer[start] == delim[d]) {
+                    if (text[start] == delim[d]) {
                         startWithDelim = true;
                         break;
                     }
                 }
                 if (length > 0 && !startWithDelim) {
-                    count++;
-                    for (int n = 0; n < length; n++) {
-                        array[count][n] = buffer[start + n];
-                    }
-                    array[count][length] = '\0';
+                    word = text.substr(start, length);
+                    words.push_back(word);
                 }
 
                 i = j + 1;
@@ -40,56 +39,51 @@ int MarkWords(char* buffer, char array[][100], char* delim, int size) {
             }
         }
     }
-    if (buffer[i] != '\0') {
-        length = strlen(buffer) - i;
+    if (text[i] != '\0') {
+        length = text.length() - i;
 
         startWithDelim = false;
         for (int d = 0; delim[d] != '\0'; d++) {
-            if (buffer[start] == delim[d]) {
+            if (text[i] == delim[d]) {
                 startWithDelim = true;
                 break;
             }
         }
 
         if (length > 0 && !startWithDelim) {
-            count++;
-            for (int n = 0; n < length; n++) {
-                array[count][n] = buffer[i + n];
-            }
-            array[count][length] = '\0';
+            word = text.substr(start, length);
+            words.push_back(word);
         }
     }
-    return count;
+    return words;
 }
 
-void BubleSort(char array[][100], int count) {
-    char temp[100];
-    for (int i = 0; i < count; i++) {
-        for (int j = 0; j < count - i; j++) {
-            if (array[j][0] > array[j + 1][0]) {
-                strcpy(temp, array[j]);
-                strcpy(array[j], array[j + 1]);
-                strcpy(array[j + 1], temp);
+void BubleSort(vector<string>& words) {
+    for (int i = 0; i < words.size(); i++) {
+        for (int j = 0; j < words.size() - i - 1; j++) {
+            if (words[j][0] > words[j+1][0]) {
+                swap(words[j], words[j + 1]);
             }
         }
     }
 }
 
-void PrintTheArray(char array[][100], int count) {
-    for (int i = 0; i <= count; i++) {
-        cout << array[i] << " ";
+void PrintTheArray(vector<string>& words) {
+    for (int i = 0; i < words.size(); i++) {
+        cout << words[i] << " ";
     }
 }
 
 int main()
 {
-    int count = 0;
-    char buffer[1000];
-    char array[1000][100];
-    char delim[] = " .,;!?-()";
+    string text;
+    vector<string> words;
+    string delim = " .,;!?-()";
 
-    SetTheArray(buffer, 1000);
-    count = MarkWords(buffer, array, delim, 100);
-    BubleSort(array, count);
-    PrintTheArray(array, count);
+    SetTheArray(text);
+    words = MarkWords(text, delim);
+    BubleSort(words);
+    PrintTheArray(words);
+
+    return 0;
 }
