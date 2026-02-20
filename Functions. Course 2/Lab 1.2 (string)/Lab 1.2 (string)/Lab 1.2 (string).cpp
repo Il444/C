@@ -1,7 +1,6 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <string>
 #include <iostream>
-#include <vector>
 using namespace std;
 
 void SetTheArray(string& text) {
@@ -9,13 +8,14 @@ void SetTheArray(string& text) {
     getline(cin, text);
 }
 
-vector<string> MarkWords(const string& text, const string& delim) {
-    vector<string> words;
+string* MarkWords(const string& text, const string& delim, int& wordCount) {
+    string* words = new string[text.length()];
     string word = "";
     int start = 0;
     int i = 0;
     int length = 0;
     bool startWithDelim = false;
+    wordCount = 0;
 
     for (int j = 0; j < text.length(); j++) {
         start = i;
@@ -31,7 +31,8 @@ vector<string> MarkWords(const string& text, const string& delim) {
                 }
                 if (length > 0 && !startWithDelim) {
                     word = text.substr(start, length);
-                    words.push_back(word);
+                    words[wordCount] = word;
+                    wordCount++;
                 }
 
                 i = j + 1;
@@ -52,24 +53,25 @@ vector<string> MarkWords(const string& text, const string& delim) {
 
         if (length > 0 && !startWithDelim) {
             word = text.substr(start, length);
-            words.push_back(word);
+            words[wordCount] = word;
+            wordCount++;
         }
     }
     return words;
 }
 
-void BubleSort(vector<string>& words) {
-    for (int i = 0; i < words.size(); i++) {
-        for (int j = 0; j < words.size() - i - 1; j++) {
-            if (words[j][0] > words[j+1][0]) {
+void BubleSort(string* words, int size) {
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (words[j][0] > words[j + 1][0]) {
                 swap(words[j], words[j + 1]);
             }
         }
     }
 }
 
-void PrintTheArray(vector<string>& words) {
-    for (int i = 0; i < words.size(); i++) {
+void PrintTheArray(string* words, int size) {
+    for (int i = 0; i < size; i++) {
         cout << words[i] << " ";
     }
 }
@@ -77,13 +79,16 @@ void PrintTheArray(vector<string>& words) {
 int main()
 {
     string text;
-    vector<string> words;
+    string* words = nullptr;
     string delim = " .,;!?-()";
+    int wordCount = 0;
 
     SetTheArray(text);
-    words = MarkWords(text, delim);
-    BubleSort(words);
-    PrintTheArray(words);
+    words = MarkWords(text, delim, wordCount);
+    BubleSort(words, wordCount);
+    PrintTheArray(words, wordCount);
+
+    delete[] words;
 
     return 0;
 }
