@@ -1,11 +1,26 @@
 ﻿#include <iostream>
-#include <stdlib.h>
-#include <time.h>
+#include <cstdlib>
 using namespace std;
 
-void InitializeArrayPersonally(int* array, int length) {
+template <typename T>
+void InitializeArrayPersonally(T* array, int length) {
     for (int i = 0; i < length; i++) {
         cin >> array[i];
+    }
+}
+
+void InitializeArrayPersonally(char* array) {
+    cout << "Write: " << endl;
+    char ch;
+    int i = 0;
+    cin.ignore();
+
+    while (true) {
+        ch = cin.get();
+        if (ch == '\n') break;
+
+        array[i] = ch;
+        i++;
     }
 }
 
@@ -15,39 +30,29 @@ void InitializeArrayRandomly(int* array, int length) {
     }
 }
 
+
+void InitializeArrayRandomly(double *array, int length) {
+    for (int i = 0; i < length; i++) {
+        array[i] = (double)(rand() % 100)/10;
+    }
+}
+
+
+void InitializeArrayRandomly(char* array, int length) {
+    for (int i = 0; i < length; i++) {
+        array[i] = 'a' + (rand() % 26);
+    }
+}
+
 void InitializeArrayAscending(int* array, int length) {
     for (int i = 0; i < length; i++) {
         array[i] = i;
     }
 }
 
-void InitializeArrayPersonally(double* array, int length) {
-    for (int i = 0; i < length; i++) {
-        cin >> array[i];
-    }
-}
-
-void InitializeArrayRandomly(double* array, int length) {
-    for (int i = 0; i < length; i++) {
-        array[i] = (rand() % 100) / 10.0;
-    }
-}
-
 void InitializeArrayAscending(double* array, int length) {
     for (int i = 0; i < length; i++) {
-        array[i] = i;
-    }
-}
-
-void InitializeArrayPersonally(char* array, int length) {
-    for (int i = 0; i < length; i++) {
-        cin >> array[i];
-    }
-}
-
-void InitializeArrayRandomly(char* array, int length) {
-    for (int i = 0; i < length; i++) {
-        array[i] = 'a' + rand() % 26;
+        array[i] = i * 1.0;
     }
 }
 
@@ -57,87 +62,75 @@ void InitializeArrayAscending(char* array, int length) {
     }
 }
 
-void PrintArray(int* array, int length) {
+template <typename T>
+void PrintArray(T* array, int length) {
     for (int i = 0; i < length; i++) {
         cout << array[i] << " ";
     }
-    cout << endl;
-}
-
-void PrintArray(double* array, int length) {
-    for (int i = 0; i < length; i++) {
-        cout << array[i] << " ";
-    }
-    cout << endl;
-}
-
-void PrintArray(char* array, int length) {
-    for (int i = 0; i < length; i++) {
-        cout << array[i] << " ";
-    }
-    cout << endl;
-}
-
-void PrintArray(char** array, int length) {
-    for (int i = 0; i < length; i++) {
-        cout << array[i] << " ";
-    }
-    cout << endl;
 }
 
 template <typename T>
-void MergeArrays(T* array, int left, int mid, int right) {
-    T* temp = new T[right - left + 1];
+void Merge(T* array, int left, int mid, int right) {
+    int i = 0;
+    int j = 0;
+    int k = left;
+    int size1 = mid - left + 1;
+    int size2 = right - mid;
 
-    int i = left;
-    int j = mid + 1;
-    int k = 0;
+    T* leftArray = new T[size1];
+    T* rightArray = new T[size2];
 
-    while (i <= mid && j <= right) {
-        if (array[i] <= array[j]) {
-            temp[k] = array[i];
+    for (int i = 0; i < size1; i++) {
+        leftArray[i] = array[left + i];
+    }
+
+    for (int i = 0; i < size2; i++) {
+        rightArray[i] = array[mid + 1 + i];
+    }
+
+    while (i < size1 && j < size2) {
+        if (leftArray[i] <= rightArray[j]) {
+            array[k] = leftArray[i];
             i++;
         }
         else {
-            temp[k] = array[j];
+            array[k] = rightArray[j];
             j++;
         }
         k++;
     }
 
-    while (i <= mid) {
-        temp[k] = array[i];
+    while (i < size1) {
+        array[k] = leftArray[i];
         i++;
         k++;
     }
 
-    while (j <= right) {
-        temp[k] = array[j];
+    while (j < size2) {
+        array[k] = rightArray[j];
         j++;
         k++;
     }
 
-    for (int p = 0; p < k; p++) {
-        array[left + p] = temp[p];
-    }
-
-    delete[] temp;
+    delete[] leftArray;
+    delete[] rightArray;
 }
 
 template <typename T>
 void MergeSort(T* array, int left, int right) {
-    if (left < right) {
-        int mid = (left + right) / 2;
-
-        MergeSort(array, left, mid);
-        MergeSort(array, mid + 1, right);
-
-        MergeArrays(array, left, mid, right);
+    if (left >= right) {
+        return;
     }
+
+    int mid = left + (right - left) / 2;
+
+    MergeSort(array, left, mid);
+    MergeSort(array, mid + 1, right);
+
+    Merge(array, left, mid, right);
 }
 
 int main() {
-    srand(time(NULL));
     int choice = 0;
     int length = 0;
 
@@ -175,6 +168,7 @@ int main() {
     cout << "Original integer array: ";
     PrintArray(intArray, length);
     MergeSort(intArray, 0, length - 1);
+    cout << endl;
     cout << "Sorted integer array: ";
     PrintArray(intArray, length);
     cout << endl;
@@ -207,6 +201,7 @@ int main() {
     cout << "Original double array: ";
     PrintArray(doubleArray, length);
     MergeSort(doubleArray, 0, length - 1);
+    cout << endl;
     cout << "Sorted double array: ";
     PrintArray(doubleArray, length);
     cout << endl;
@@ -214,8 +209,6 @@ int main() {
     cout << "How would you like to initialize the char array?" << endl;
     cout << "1. Personally" << endl << "2. Randomly" << endl << "3. Ascending" << endl;
     cin >> choice;
-    cout << "Enter the length of char array: ";
-    cin >> length;
 
     while (length <= 0) {
         cout << "You wrote incorrect data, try again" << endl;
@@ -226,7 +219,7 @@ int main() {
 
     switch (choice) {
     case 1:
-        InitializeArrayPersonally(charArray, length);
+        InitializeArrayPersonally(charArray);
         break;
     case 2:
         InitializeArrayRandomly(charArray, length);
@@ -236,16 +229,13 @@ int main() {
         break;
     }
 
-    cout << "Original char array: ";
+    cout << "Original double array: ";
     PrintArray(charArray, length);
     MergeSort(charArray, 0, length - 1);
-    cout << "Sorted char array: ";
+    cout << endl;
+    cout << "Sorted double array: ";
     PrintArray(charArray, length);
     cout << endl;
-
-    delete[] intArray;
-    delete[] doubleArray;
-    delete[] charArray;
 
     return 0;
 }
