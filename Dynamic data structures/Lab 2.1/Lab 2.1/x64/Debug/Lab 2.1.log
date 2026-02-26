@@ -1,0 +1,4 @@
+﻿  Lab 2.1.cpp
+D:\C++\Dynamic data structures\Lab 2.1\Lab 2.1\Lab 2.1.cpp(95,42): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+D:\C++\Dynamic data structures\Lab 2.1\Lab 2.1\Lab 2.1.cpp(98,40): warning C4244: аргумент: преобразование "__int64" в "int", возможна потеря данных
+  Lab 2.1.vcxproj -> D:\C++\Dynamic data structures\Lab 2.1\x64\Debug\Lab 2.1.exe
