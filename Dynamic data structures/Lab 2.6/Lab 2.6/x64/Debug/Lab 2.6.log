@@ -1,0 +1,4 @@
+﻿  Lab 2.6.cpp
+D:\C++\Dynamic data structures\Lab 2.6\Lab 2.6\Lab 2.6.cpp(17,12): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\C++\Dynamic data structures\Lab 2.6\Lab 2.6\Lab 2.6.cpp(21,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Lab 2.6.vcxproj -> D:\C++\Dynamic data structures\Lab 2.6\x64\Debug\Lab 2.6.exe
