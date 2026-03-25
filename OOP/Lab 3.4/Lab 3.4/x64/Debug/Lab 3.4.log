@@ -1,0 +1,4 @@
+﻿  Lab 3.4.cpp
+D:\C++\OOP\Lab 3.4\Lab 3.4\Lab 3.4.cpp(21,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C++\OOP\Lab 3.4\Lab 3.4\Lab 3.4.cpp(22,5): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\C++\OOP\Lab 3.4\Lab 3.4\Lab 3.4.cpp(23,5): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
